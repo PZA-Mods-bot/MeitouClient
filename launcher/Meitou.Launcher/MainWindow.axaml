@@ -210,7 +210,7 @@
               <TextBlock Text="Mods" />
             </DockPanel>
           </Border>
-          <!-- Presets: apply or delete a saved one on the left, save the list as a new one on the right -->
+          <!-- Presets: apply, save into or delete a saved one on the left, save the list as a new one on the right -->
           <DockPanel DockPanel.Dock="Top" Margin="0,0,0,8">
             <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" Spacing="6">
               <TextBox x:Name="PresetName" Width="220" PlaceholderText="New preset name" />
@@ -227,6 +227,12 @@
                 <StackPanel Orientation="Horizontal" Spacing="6">
                   <Path Classes="glyph" Data="M0,7 L1.5,5.5 L5,9 L12.5,1.5 L14,3 L5,12 Z" />
                   <TextBlock Text="Apply" />
+                </StackPanel>
+              </Button>
+              <Button Click="UpdatePreset_Click" ToolTip.Tip="Save the mod list and load order into the chosen preset">
+                <StackPanel Orientation="Horizontal" Spacing="6">
+                  <Path Classes="glyph" Data="M0,0 H11 L14,3 V14 H0 Z M3,1.5 V5 H10 V1.5 Z M3,8 V12.5 H11 V8 Z" />
+                  <TextBlock Text="Save" />
                 </StackPanel>
               </Button>
               <Button Click="DeletePreset_Click" ToolTip.Tip="Delete the chosen preset">

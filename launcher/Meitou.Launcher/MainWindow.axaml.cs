@@ -1574,12 +1574,35 @@ public sealed partial class MainWindow : Window
             return;
         }
         if (!ModsReady()) return;
+        StorePreset(name);
+        PresetName.Text = "";
+        Status(Tr("Preset '{1}' saved.", name));
+    }
+
+    /// <summary>
+    /// Saves the current mod list into the chosen preset, under its own name, so a changed load order needs no retyped name.
+    /// </summary>
+    void UpdatePreset_Click(object? sender, RoutedEventArgs e)
+    {
+        if (PresetBox.SelectedItem is not ModPreset preset)
+        {
+            Status("Choose a preset to save into.");
+            return;
+        }
+        if (!ModsReady()) return;
+        StorePreset(preset.Name);
+        Status(Tr("Preset '{1}' updated.", preset.Name));
+    }
+
+    /// <summary>
+    /// Stores the current mod list as the preset <paramref name="name"/> (replacing one of that name), saves and selects it.
+    /// </summary>
+    void StorePreset(string name)
+    {
         _config.Presets.RemoveAll(p => p.Name == name);
         _config.Presets.Add(new ModPreset { Name = name, Mods = [.. _mods.Select(m => new PresetMod { Name = m.Name, Enabled = m.Enabled })] });
         _config.Save();
-        PresetName.Text = "";
         RefreshPresets(name);
-        Status(Tr("Preset '{1}' saved.", name));
     }
 
     /// <summary>

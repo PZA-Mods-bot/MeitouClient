@@ -285,7 +285,8 @@ interpolated string, which no translation could match.
   its description and its folder. The description's Steam BBCode is drawn (`BbCodeView`: headings, bold, italic, underline, strike,
   links, lists, quotes, code, rules, tables, spoilers, noparse); unknown or unmatched tags stay literal, only http(s) links open and
   `[img]` is a link, never fetched.
-- The preset row sits above the list: the preset box with Apply and Delete, and the new preset's name with Save as preset.
+- The preset row sits above the list: the preset box with Apply, Save and Delete, and the new preset's name with Save as preset.
+  Save writes the current list into the chosen preset under its own name, so updating a preset needs no retyped name.
 - A preset is a named, ordered list of names with enabled flags. Applying one reorders the list. Mods the preset doesn't name go
   to the end, disabled, and mods it names that aren't on disk are reported. Applying saves.
 - From save lists the save folders (with `quick.save`) of Meitou's save root, the install's `save` and the per-user Kenshi save folder,

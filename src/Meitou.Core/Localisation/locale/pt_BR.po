@@ -1677,6 +1677,9 @@ msgstr "Salvar a lista de mods e a ordem de carregamento como uma predefinição
 msgid "Take the chosen preset's mod list and load order"
 msgstr "Usar a lista de mods e a ordem de carregamento da predefinição escolhida"
 
+msgid "Save the mod list and load order into the chosen preset"
+msgstr "Salvar a lista de mods e a ordem de carregamento na predefinição escolhida"
+
 msgid "Delete the chosen preset"
 msgstr "Excluir a predefinição escolhida"
 

@@ -2182,6 +2182,12 @@ msgstr "已启用 {1} / {2}"
 msgid "Preset '{1}' saved."
 msgstr "预设「{1}」已保存。"
 
+msgid "Preset '{1}' updated."
+msgstr "预设「{1}」已更新。"
+
+msgid "Choose a preset to save into."
+msgstr "请选择要保存到的预设。"
+
 msgid "Preset '{1}' applied."
 msgstr "预设「{1}」已应用。"
 
@@ -3100,6 +3106,9 @@ msgstr "将模组列表和加载顺序保存为此名称的预设"
 
 msgid "Take the chosen preset's mod list and load order"
 msgstr "采用所选预设的模组列表和加载顺序"
+
+msgid "Save the mod list and load order into the chosen preset"
+msgstr "将模组列表和加载顺序保存到所选预设"
 
 msgid "Delete the chosen preset"
 msgstr "删除所选预设"
